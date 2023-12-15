@@ -1,68 +1,68 @@
-package com.kodilla.testing.forum;                             // [1]
+package com.kodilla.testing.forum;
 
-import java.util.ArrayList;                                    // [2]
-import java.util.LinkedList;                                   // [3]
+import java.util.ArrayList;
+import java.util.LinkedList;
 
 import java.util.List;
 
-public class ForumUser {                                       // [5]
+public class ForumUser {
 
-    private String name;                                        // [6]
-    private String realName;                                    // [7]
-    private List<ForumPost> posts = new ArrayList<>();          // [8]
-    private List<ForumComment> comments = new LinkedList<>();   // [9]
+    private String name;
+    private String realName;
+    private List<ForumPost> posts = new ArrayList<>();
+    private List<ForumComment> comments = new LinkedList<>();
 
-    public ForumUser(String name, String realName) {            // [10]
+    public ForumUser(String name, String realName) {
         //name visible on forum
-        this.name = name;                                        // [11]
+        this.name = name;
         //real name of the user
-        this.realName = realName;                                // [12]
-    }                                                           // [13]
+        this.realName = realName;
+    }
 
-    public void addPost(String author, String postBody) {       // [14]
+    public void addPost(String author, String postBody) {
         // do nothing
-    }                                                           // [15]
+    }
 
-    public void addComment(ForumPost thePost, String author, String commentBody) {   // [16]
+    public void addComment(ForumPost thePost, String author, String commentBody) {
         // do nothing
-    }                                                           // [17]
+    }
 
-    public int getPostsQuantity() {                             // [18]
+    public int getPostsQuantity() {
         // return 100 temporarily
-        return 100;                                              // [19]
-    }                                                           // [20]
+        return 100;
+    }
 
-    public int getCommentsQuantity() {                          // [21]
+    public int getCommentsQuantity() {
         // return 100 temporarily
-        return 100;                                              // [22]
-    }                                                           // [23]
+        return 100;
+    }
 
-    public ForumPost getPost(int postNumber) {                  // [24]
+    public ForumPost getPost(int postNumber) {
         // returning null means that the operation was unsuccessful
-        return null;                                             // [25]
-    }                                                           // [26]
+        return null;
+    }
 
-    public ForumComment getComment(int commentNumber) {         // [27]
+    public ForumComment getComment(int commentNumber) {
         // returning null means that the operation was unsuccessful
-        return null;                                             // [28]
-    }                                                           // [29]
+        return null;
+    }
 
-    public boolean removePost(ForumPost thePost) {              // [30]
+    public boolean removePost(ForumPost thePost) {
         // return true temporarily
-        return true;                                             // [31]
-    }                                                           // [32]
+        return true;
+    }
 
-    public boolean removeComment(ForumComment theComment) {     // [33]
+    public boolean removeComment(ForumComment theComment) {
         // return true temporarily
-        return true;                                             // [34]
-    }                                                           // [35]
+        return true;
+    }
 
-    public String getName() {                                   // [36]
-        return name;                                             // [37]
-    }                                                           // [38]
+    public String getName() {
+        return name;
+    }
 
-    public String getRealName() {                               // [39]
-        return realName;                                         // [40]
+    public String getRealName() {
+        return realName;
     }
 
 }
