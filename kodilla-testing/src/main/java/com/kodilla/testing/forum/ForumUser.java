@@ -3,7 +3,8 @@ package com.kodilla.testing.forum;                             // [1]
 import java.util.ArrayList;                                    // [2]
 import java.util.LinkedList;                                   // [3]
 
-import java.util.List;                                         // [4]
+import java.util.List;
+
 public class ForumUser {                                       // [5]
 
     private String name;                                        // [6]
@@ -62,5 +63,6 @@ public class ForumUser {                                       // [5]
 
     public String getRealName() {                               // [39]
         return realName;                                         // [40]
-    }                                                           // [41]
+    }
+
 }
