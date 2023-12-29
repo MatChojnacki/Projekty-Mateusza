@@ -40,7 +40,7 @@ class shapeCollectorTestSuite {
         @DisplayName("TEST 2: Obliczanie pola figury")
         void testCalculateField() {
             // Given
-            Shape square = new Square(4);
+            Square square = new Square(4);
             double expectedFieldSquare = 16.0;
 
             // When
