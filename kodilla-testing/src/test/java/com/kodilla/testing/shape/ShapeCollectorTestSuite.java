@@ -5,7 +5,7 @@ import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayName("Klasa: Shape Collector Test Suite")
-class shapeCollectorTestSuite {
+class ShapeCollectorTestSuite {
 
     @Nested
     @DisplayName("Tworzenie obiektow")
