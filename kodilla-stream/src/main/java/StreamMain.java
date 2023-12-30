@@ -37,8 +37,6 @@ public class StreamMain {
         poemBeautifier.beautify(textToBeautify, s -> "ABC " + s + " ABC");
         poemBeautifier.beautify(textToBeautify, s -> s.replaceAll("Chojnacki", "Ch"));
 
-
-
     }
 }
 
