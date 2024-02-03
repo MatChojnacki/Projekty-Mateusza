@@ -2,7 +2,7 @@ package com.kodilla.rps.Game;
 
 import java.util.Scanner;
 
-public class RpsRunner {
+public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
