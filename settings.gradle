@@ -6,4 +6,5 @@ include 'kodilla-good-patterns'
 include 'kodilla-rps'
 include 'spring'
 include 'kodilla-patterns-enum'
+include 'kodilla-jdbc'
 
