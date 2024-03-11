@@ -2,8 +2,10 @@ package com.kodilla.hibernate.tasklist;
 
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "TASKLISTS")
@@ -21,7 +23,9 @@ public class TaskList {
         this.listName = listName;
         this.description = description;
     }
-@Id
+    @Id
+    @GeneratedValue
+    @NotNull
     public int getId() {
         return id;
     }
