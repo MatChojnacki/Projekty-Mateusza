@@ -6,13 +6,21 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import static org.junit.jupiter.api.Assertions.*;
+
+
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 
 @SpringBootTest
 class CompanyDaoTestSuite {
 
     @Autowired
     private CompanyDao companyDao;
+    @Autowired
+    private CompanyRepository companyRepository;
 
     @Test
     void testSaveManyToMany() {
@@ -51,12 +59,29 @@ class CompanyDaoTestSuite {
         assertNotEquals(0, greyMatterId);
 
         //CleanUp
-        //try {
-        //    companyDao.deleteById(softwareMachineId);
-        //    companyDao.deleteById(dataMaestersId);
-        //    companyDao.deleteById(greyMatterId);
-        //} catch (Exception e) {
-        //    //do nothing
-        //}
+        try {
+           companyDao.deleteById(softwareMachineId);
+           companyDao.deleteById(dataMaestersId);
+            companyDao.deleteById(greyMatterId);
+        } catch (Exception e) {
+            //do nothing
+        }
     }
+
+
+        @Test
+        void findByFirstThreeCharsOfName() {
+            // Given
+            Company company1 = new Company("ABC Company");
+            Company company2 = new Company("XYZ Corporation");
+            companyRepository.save(company1);
+            companyRepository.save(company2);
+
+            // When
+            List<Company> companies = companyRepository.findByFirstThreeCharsOfName("ABC");
+
+            // Then
+            assertEquals(1, companies.size());
+            assertEquals("ABC Company", companies.get(0).getName());
+        }
 }
